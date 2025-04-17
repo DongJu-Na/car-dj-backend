@@ -1,13 +1,30 @@
-# Getting Started
+# 무제
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### 디렉토리 구조
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/3.4.4/gradle-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.4.4/gradle-plugin/packaging-oci-image.html)
-* [WebSocket](https://docs.spring.io/spring-boot/3.4.4/reference/messaging/websockets.html)
-* [Spring Web](https://docs.spring.io/spring-boot/3.4.4/reference/web/servlet.html)
+```
+📦src
+ ┣ 📂main
+ ┃ ┣ 📂java
+ ┃ ┃ ┗ 📂com.dongju
+ ┃ ┃   ┣ 📂common         # 공통 유틸, 예외 처리 등
+ ┃ ┃   ┣ 📂global         # 글로벌 설정 (WebSocket 설정 등)
+ ┃ ┃   ┣ 📂game           # 게임 도메인
+ ┃ ┃   ┃ ┣ 📂controller   # 웹소켓 핸들러 (게임 메시지 처리)
+ ┃ ┃   ┃ ┣ 📂service      # 게임 서비스 로직 (차량 배치, 충돌 등)
+ ┃ ┃   ┃ ┣ 📂model        # 게임 모델 (Car, Position 등)
+ ┃ ┃   ┃ ┗ 📂dto          # 클라이언트와 주고받는 메시지 DTO
+ ┃ ┃   ┗ 📂chat           # 채팅 도메인
+ ┃ ┃     ┣ 📂controller   # 채팅 메시지 처리 핸들러
+ ┃ ┃     ┣ 📂service      # 채팅 서비스 로직
+ ┃ ┃     ┣ 📂model        # 채팅 유저 등 도메인 객체
+ ┃ ┃     ┗ 📂dto          # 채팅 메시지 DTO
+ ┃ ┗ 📂resources
+ ┃   ┣ 📜application.yml
+ ┃   ┗ 📜static / templates
+ ┗ 📂test
+
+```
 
 ### Guides
 The following guides illustrate how to use some features concretely:
